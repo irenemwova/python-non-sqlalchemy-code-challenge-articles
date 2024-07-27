@@ -1,9 +1,12 @@
 import pytest
+import sys
+import os
 
-from classes.many_to_many import Article
-from classes.many_to_many import Magazine
-from classes.many_to_many import Author
+# Add the project root directory to the Python path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, project_root)
 
+from lib.classes.many_to_many import Article, Magazine, Author
 
 class TestMagazine:
     """Magazine in many_to_many.py"""
